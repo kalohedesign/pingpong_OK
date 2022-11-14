@@ -55,14 +55,14 @@ function keyPressed(){
 /* Funktionen für Game */
 
 function startGame() {
-  background(200)
+  background(0)
   textAlign(CENTER)
-  textSize(40)
+  textSize(60)
+  fill(255)
   text('FEDERER vs. NADAL', width/2, height/2)
+  fill(150, 0, 255)
   textSize(24)
-  text('press space to start', width/2, height/2+50)
-
-
+  text('press space to start', width/2, height/2+100)
 }
 
 
@@ -71,7 +71,7 @@ function playGame() {
 
   textAlign(LEFT)
   textSize(24)
-  fill(80)
+  fill(100)
   text('Nadal: ' + scoreNadal, 50, height/2-20)
   rect(width/2, height/2, width-100, 4 )
   text('Federer: ' + scoreFederer, 50, height/2+38)
@@ -81,7 +81,7 @@ function playGame() {
   ellipse(xBall, yBall, dBall)
   
   yNadal = 50 
-  fill(255, 120, 0)
+  fill(0, 50, 255)
   rect(mouseX, yNadal, widthNadal, 10)
   image(imgNadal, mouseX-60, yNadal+10)
   yFederer = height-50 
@@ -127,16 +127,17 @@ function playGame() {
 }
 
 function endGameFederer() {
-  background(200)
+  background(0)
   textAlign(CENTER)
   textSize(40)
-  text('GAME OVER: FEDERER WINS', width/2, height/2)
+  text('GAME OVER : FEDERER WINS', width/2, height/2)
   text('😢', width/2, height/2+50)
 }
 function endGameNadal() {
-  background(200)
+  background(0)
   textAlign(CENTER)
   textSize(40)
-  text('GAME OVER: NADAL WINS', width/2, height/2)
+  fill(0, 50, 255)
+  text('GAME OVER : NADAL WINS', width/2, height/2)
   text('😢', width/2, height/2+50)
 }
